@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tables and Grids Pattern</title>
+    <meta name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if gt IE 9]><!--> 
+        <link rel="stylesheet" href="../dist/responsivetables.css" media="screen and (max-width: 639px)">
+    <!--<![endif]-->
+    <style>
+        main { max-width:900px; margin: 20px auto;}
+
+        /*! pattern-bucket table-styling.css */
+        table { border-collapse:collapse; border: 1px solid #ccc; background-color: #fff; }
+        td, 
+        th { padding: .25em .5em; border:1px solid #ccc; }
+
+        tr:nth-child(even) { background-color: #eee;}
+        thead > tr,
+        tfoot > tr { background-color: #e4e4e4; background-image: linear-gradient(#f5f5f5, #ddd); }
+    </style>
+</head>
+<body>
+    <main>
+            
+<h1>Tables and Grids Pattern</h1>
+<p>Note: Table Styling Pattern included for presentational purposes</p>
+
+<h2>Plain Table</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Employed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="item">
+            <td data-label="Name">John</td>
+            <td data-label="Age">25</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Sam</td>
+            <td data-label="Age">4</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">No</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Sally</td>
+            <td data-label="Age">40</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Samantha</td>
+            <td data-label="Age">18</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<h2>Responsive Table</h2>
+
+<table class="responsive">
+    <thead class="tabular-view-only">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Employed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="item">
+            <td data-label="Name">John</td>
+            <td data-label="Age">25</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Sam</td>
+            <td data-label="Age">4</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">No</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Sally</td>
+            <td data-label="Age">40</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Samantha</td>
+            <td data-label="Age">18</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+<h2>Average Grid</h2>
+
+<table class="responsive">
+    <thead>
+        <tr class="sorter">
+            <th><a class="sortable asc" href="#">Name</a></th>
+            <th><a class="sortable" href="#">Age</a></th>
+            <th><a class="sortable" href="#">Gender</a></th>
+            <th><a class="sortable" href="#">Employed</a></th>
+            <th class="tabular-view-only">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="item">
+            <td data-label="Name">John</td>
+            <td data-label="Age">25</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">Yes</td>
+            <td class="item-actions">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Sam</td>
+            <td data-label="Age">4</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">No</td>
+            <td class="item-actions">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Sally</td>
+            <td data-label="Age">40</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+            <td class="item-actions">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Samantha</td>
+            <td data-label="Age">18</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+            <td class="item-actions">
+                <a href="#">Edit</a>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+<h2>Complex Grid</h2>
+
+<form>
+    <table class="responsive" summary="Text for screen reader here">
+        <caption>Table Caption</caption>
+        <thead>
+            <tr class="sorter">
+                <th><a class="sortable" href="#">Name</a></th>
+                <th><a class="sortable desc" href="#">Age</a></th>
+                <th><a class="sortable" href="#">Gender</a></th>
+                <th><a class="sortable" href="#">Employed</a></th>
+                <th class="tabular-view-only">Actions</th>
+            </tr>
+            <tr class="filters">
+                <td class="filter" data-label="Name">
+                    <input type="text" name="Name" id="filter-Name2">
+                </td>
+                <td class="filter" data-label="Age">
+                    <input type="text" name="Age" id="filter-Age2">
+                </td>
+                <td class="filter" data-label="Gender">
+                    <select name="Gender" id="filter-Gender2">
+                        <option value=""></option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </td>
+                <td class="filter" data-label="Employed">
+                    <select name="Employed" id="filter-Employed2">
+                        <option value=""></option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </td>
+                <td class="filter">
+                    <input type="submit" value="Filter">
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="item">
+                <td data-label="Name">John</td>
+                <td data-label="Age">25</td>
+                <td data-label="Gender">Male</td>
+                <td data-label="Employed">Yes</td>
+                <td class="item-actions">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+            <tr class="item">
+                <td data-label="Name">Sam</td>
+                <td data-label="Age">4</td>
+                <td data-label="Gender">Male</td>
+                <td data-label="Employed">No</td>
+                <td class="item-actions">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+            <tr class="item">
+                <td data-label="Name">Sally</td>
+                <td data-label="Age">40</td>
+                <td data-label="Gender">Female</td>
+                <td data-label="Employed">Yes</td>
+                <td class="item-actions">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+            <tr class="item">
+                <td data-label="Name">Samantha</td>
+                <td data-label="Age">18</td>
+                <td data-label="Gender">Female</td>
+                <td data-label="Employed">Yes</td>
+                <td class="item-actions">
+                    <a href="#">Edit</a>
+                    <a href="#">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><strong>Totals:</strong></td>
+                <td data-label="Age">117</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <ul class="pager">
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</form>
+
+
+
+
+<h2>Nested Table</h2>
+
+<table class="responsive">
+    <thead class="tabular-view-only">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Employed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="item">
+            <td data-label="Name">Sam</td>
+            <td data-label="Age">4</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">No</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">John</td>
+            <td colspan="2">
+                <table>
+                    <thead class="tabular-view-only">
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+                            <th>Employed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="item">
+                            <td data-label="Name">John</td>
+                            <td data-label="Age">25</td>
+                            <td data-label="Gender">Male</td>
+                            <td data-label="Employed">Yes</td>
+                        </tr>
+                        <tr class="item">
+                            <td data-label="Name">Sam</td>
+                            <td data-label="Age">4</td>
+                            <td data-label="Gender">Male</td>
+                            <td data-label="Employed">No</td>
+                        </tr>
+                        <tr class="item">
+                            <td data-label="Name">Sally</td>
+                            <td data-label="Age">40</td>
+                            <td data-label="Gender">Female</td>
+                            <td data-label="Employed">Yes</td>
+                        </tr>
+                        <tr class="item">
+                            <td data-label="Name">Samantha</td>
+                            <td data-label="Age">18</td>
+                            <td data-label="Gender">Female</td>
+                            <td data-label="Employed">Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td data-label="Employed">No</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Sally</td>
+            <td data-label="Age">40</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+        <tr class="item">
+            <td data-label="Name">Samantha</td>
+            <td data-label="Age">18</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h2>Row Headers</h2>
+
+<table class="responsive">
+    <thead class="tabular-view-only">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Employed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="item">
+            <th>Employee 1</th>
+            <td data-label="Name">John</td>
+            <td data-label="Age">25</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+        <tr class="item">
+            <th>Employee 2</th>
+            <td data-label="Name">Sam</td>
+            <td data-label="Age">4</td>
+            <td data-label="Gender">Male</td>
+            <td data-label="Employed">No</td>
+        </tr>
+        <tr class="item">
+            <th>Employee 3</th>
+            <td data-label="Name">Sally</td>
+            <td data-label="Age">40</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+        <tr class="item">
+            <th>Employee 4</th>
+            <td data-label="Name">Samantha</td>
+            <td data-label="Age">18</td>
+            <td data-label="Gender">Female</td>
+            <td data-label="Employed">Yes</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    </main>
+
+</body>
+</html>
