@@ -1,5 +1,5 @@
-﻿/*  Responsive Tables
-Usage: 
+﻿/*! Responsive Tables */
+/* Usage: 
     * Add to the head (excludes IE9 and below):
 	    <!--[if gt IE 9]><!--> <link rel="stylesheet" href="responsivetables.css" media="screen and (max-width: 599px)"> <!--<![endif]-->
 	* Add class "responsive" to table elements that should collapse at narrow screen widths
